@@ -21,9 +21,11 @@ export class UserRepository {
     return rows[0] || null;
   }
 
+
   async addUser(name: string, email: string, passwordHash: string): Promise<User> {
     const queryText = 'INSERT INTO users(name, email, passwordhash) VALUES($1, $2, $3) RETURNING *';
     const { rows } = await this.pool.query(queryText, [name, email, passwordHash]);
     return rows[0];
   }
 }
+

@@ -1,3 +1,5 @@
+# BookStore 📚
+
 ## Índice  
 - [Sobre o Projeto](#sobre-o-projeto)  
 - [Funcionalidades](#funcionalidades)  
@@ -6,111 +8,143 @@
 - [Instalação](#instalação)  
 - [Configuração do Banco de Dados](#configuração-do-banco-de-dados)  
 - [Execução do Projeto](#execução-do-projeto)  
-- [Testando as Requisições](#testando-as-requisições)  
-- [Créditos](#créditos)  
+- [Testando as Requisições](#Testando-as-Requisições)
+- [Agradecimentos](#Agradecimentos)
+
 
 ---
 
-## **Sobre o Projeto**  
-O *BookStore* é um projeto que foi criado para a discipçina de BackEnd e é voltado para o gerenciamento de uma livraria virtual, oferecendo uma API robusta e eficiente. 
-O foco aqui é a escalabilidade e organização, ele foi desenvolvido para atender às demandas modernas, mas ainda pode melhorar.  
+## Sobre o Projeto  
 
-Usando tecnologias como **Node.js**, **TypeScript** e **PostgreSQL**, o *BookStore* combina desempenho e confiabilidade, ideal para sistemas que exigem alta disponibilidade.  
+BookStore é um projeto backend voltado para o gerenciamento de uma livraria virtual, com foco em eficiência e organização. Ele fornece uma API robusta e bem estruturada, capaz de atender às necessidades de sistemas modernos no setor de livrarias.
 
-## **Funcionalidades**  
-- **Autenticação de Usuários**:  
-  Cadastro e login com validação de dados.  
-- **Gestão de Livros**:  
-  Adicionar e consultar livros da livraria.  
+Desenvolvido com tecnologias como **Node.js**, **TypeScript** e **PostgreSQL**, o projeto combina desempenho e escalabilidade, garantindo uma solução confiável para operações que exigem alta disponibilidade e precisão.
 
-## **Tecnologias presentes no projeto**  
+---
+
+## Funcionalidades  
+
+- **Autenticação de Usuários**: Criação de usuários e login com validação.  
+- **Gestão de Livros**: Adicionar livros ao catálogo da livraria.  
+
+---
+
+## Tecnologias Utilizadas  
+
 - **Node.js**  
 - **Express.js**  
 - **TypeScript**  
 - **PostgreSQL**  
-- **Jest**   
+- **Jest** (para testes unitários e de integração)  
+- **Supertest** (para testes de requisição)  
 
-## **Pré-requisitos**  
-Antes de começar, você precisará das seguintes ferramentas:  
+---
+
+## Pré-requisitos  
+
+Antes de começar, certifique-se de ter as seguintes ferramentas instaladas:  
+
 - **Node.js** (versão 18 ou superior)  
-- **PostgreSQL** (banco de dados)  
-- Um editor de código como o **VS Code**.  
+- **PostgreSQL** (para banco de dados)  
+- Editor de código como **VS Code** (recomendado).  
 
-## **Instalação**  
+---
 
-1. Clone o repositório:  
-   ```bash  
-   git clone https://github.com/DutraOne/projetoLivrariaDutra
-   ```  
+## Instalação  
 
-2. Acesse o diretório do projeto:  
-   ```bash  
-   cd bookstore  
-   ```  
+**1.** Clone o repositório:  
 
-3. Instale as dependências:  
-   ```bash  
-   npm install express pg dotenv  
-   npm install --save-dev typescript jest @types/jest ts-jest supertest @types/express  
-   ```  
+git clone https://github.com/GabeeDevs/FinalProject.git
 
-## **Configuração do Banco de Dados**  
 
-1. Certifique-se de que o PostgreSQL está em execução.  
-2. Configure a conexão no arquivo `src/config/database.ts`.  
-   - Ajuste as chaves de conexão para evitar erros durante a execução.  
-3. Crie as tabelas no banco de dados:  
-   ```bash  
-   npx ts-node src/migrations/bookMigrations.ts  # Tabela de livros  
-   npx ts-node src/migrations/migrations.ts     # Tabela de usuários  
-   ```  
+**2.** Acessando a pasta do projeto:
 
-## **Execução do Projeto**  
+cd bookstore
 
-Com o ambiente configurado, inicie o servidor:  
-```bash  
-npx ts-node src/server.ts  
-```  
 
-A API estará disponível em:  
-```
-http://localhost:3000  
-```  
+**3. Instalando as dependencias:**
 
-## **Testando as Requisições**  
+**3.1** -> npm install express pg dotenv
+**3.2** -> npm install --save-dev typescript jest @types/jest ts-jest supertest @types/express
+**3.3** -> npm install cors
 
-As requisições podem ser testadas usando o arquivo `requests.http`. Para isso:  
-1. Instale a extensão **REST Client** no VS Code.  
+---
 
-Alternativamente, use os comandos `curl` no terminal:  
+## configuração-do-banco-de-dados
 
-1. **Consulta de Usuários**:  
-   ```bash  
-   curl -X GET http://localhost:3000/users  
-   ```  
+**1.** Certifique-se de que o PostgreSQL está em execução. 
 
-2. **Registro de Usuários**:  
-   ```bash  
-   curl -X POST http://localhost:3000/register -H "Content-Type: application/json" -d '{"name": "Jeremias", "email": "jeremias@example.com", "password": "senhaSeguraa"}'  
-   ```  
+**2.** Configure a conexão no arquivo no qual está localizado em src/config/database.ts.
 
-3. **Login de Usuário**:  
-   ```bash  
-   curl -X POST http://localhost:3000/login -H "Content-Type: application/json" -d '{"email": "jeremias@example.com", "password": "senhaSeguraa"}'  
-   ```  
+**OBS:** é necessario trocar a chave de conexão para que não tenha erro na execução do banco de dados.
 
-4. **Consulta de Livros**:  
-   ```bash  
-   curl -X GET http://localhost:3000/books  
-   ```  
+**3.** Carregando as tabelas do banco de dados.
 
-5. **Registro de Livros**:  
-   ```bash  
-   curl -X POST http://localhost:3000/books -H "Content-Type: application/json" -d '{"title": "Isaías 54:17", "author": "Isaías", "price": "59.90"}'  
-   ```  
 
-## **Créditos**  
+**Criando  a tabela de livros:**
 
-Projeto realizado por:
-    - Caio César Penha Soares
-    - RA: 101140
+npx ts-node src/migrations/bookMigrations.ts
+
+**Criando a tabela de Usuários:**
+npx ts-node src/migrations/migrations.ts
+
+---
+
+# execução-do-projeto
+
+Após realizar todos os passos acima vamos para a execução do Projeto.
+
+**Iniciando o servidor**
+npx ts-node src/server.ts
+
+---
+
+# Testando-as-Requisições
+
+As requisições podem ser realizadas utilizando o arquivo requests.http. Para isso, é necessário instalar a extensão REST Client no seu editor de código.
+
+Alternativamente, você pode utilizar os comandos curl abaixo diretamente no terminal para interagir com a API. 
+
+OBS: Necessário estar com o servidor rodando.
+
+
+**1.** Consulta dos Usuários:
+
+curl -X GET http://localhost:3000/users
+
+**2.** Registro de Usuários:
+
+curl -X POST http://localhost:3000/register -H "Content-Type: application/json" -d '{"name": "Jeremias", "email": "jeremias@example.com", "password": "senhaSeguraa"}'
+
+
+**3.** Login de Usuário:
+
+curl -X POST http://localhost:3000/login -H "Content-Type: application/json" -d '{"email": "Jeremias@example.com", "password": "senhaSeguraa"}'
+
+
+**4.** Consulta de Livros: 
+
+curl -X GET http://localhost:3000/books
+
+**5..** Registro de Livros:
+
+curl -X POST http://localhost:3000/books -H "Content-Type: application/json" -d '{"title": "Isaías 54:17", "author": "Isaías", "price": "59.90"}'
+
+
+**TESTANDO COM SOLICITAÇÕES NO HTML UTILIZANDO A API NO JAVASCRIPT  (OBS: Necessário estar com o servidor do back-end rodando)**
+
+**Link do repositório de Front-End:**
+https://github.com/GabeeDevs/FinalProjectFront
+---
+
+## Agradecimentos  
+
+Obrigado por dedicar seu tempo para conhecer o projeto **BookStore**! Desenvolvi este sistema com muito cuidado e atenção, buscando aplicar as melhores práticas de desenvolvimento backend com tecnologias modernas e eficientes.  
+
+Espero que este projeto atenda às suas expectativas e seja útil, seja para estudos, prática ou até como base para novas implementações.  
+
+Caso tenha dúvidas, sugestões ou queira contribuir, ficarei muito feliz em ouvir você! Seu feedback é essencial para melhorar ainda mais este trabalho.  
+
+Agradeço novamente pela oportunidade de compartilhar este projeto com vocês!  
+
+**Desenvolvido com dedicação por Gabriel Ramos.**
