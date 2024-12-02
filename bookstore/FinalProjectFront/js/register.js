@@ -13,8 +13,6 @@ document.getElementById('registerForm').addEventListener('submit', async (e) => 
         body: JSON.stringify({ name, email, password }),
       });
 
-      console.log({ name, email, password });
-
 
       if (response.ok) {
         alert('Registro realizado com sucesso!');

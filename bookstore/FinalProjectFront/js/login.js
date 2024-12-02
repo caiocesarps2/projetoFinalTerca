@@ -3,14 +3,12 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
   const email = document.getElementById('email').value;
   const password = document.getElementById('password').value;
 
-  try {
-
-    let url = "http://localhost:3000/login"
-
-    const response = await fetch(url, {
+  try {  
+    const response = await fetch("http://localhost:3000/login", {
       method: 'POST',
+      mode: "cors",
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email, password }),
+      body: JSON.stringify({ email: "ca@mail.com", password: "123" }),
     });
 
     if (response.ok) {
@@ -21,5 +19,6 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
     }
   } catch {
     alert('Usuário ou Senha incorretos, tente novamente');
+    console.log({email, password})
   }
 });
