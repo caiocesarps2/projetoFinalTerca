@@ -30,7 +30,7 @@ main{
 
 .container-form{
     width: 500px;
-    height: 480px;
+    height: 520px;
     background-color: #eee;  
     border-radius: 10px;
     border-style: solid;
@@ -50,6 +50,7 @@ main{
     font-size: 40px;
     color: #333;
     margin-top: 20px;
+    margin-bottom: 30px;
     text-decoration: underline;
 }
 #form-livro{
