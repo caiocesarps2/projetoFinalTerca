@@ -136,7 +136,5 @@ curl -X POST http://localhost:3000/books -H "Content-Type: application/json" -d 
 **Realize os seguintes passos:**
 
 - Abra o arquivo register.html com o OpenLiveServer.
-<br>
 - Após isso faça os testes, como registro, login e cadastro dos livros!
-<br>
 
