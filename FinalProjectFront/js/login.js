@@ -1,4 +1,4 @@
-document.getElementById('loginForm').addEventListener('submit', async (e) => {
+document.getElementById('form-login').addEventListener('submit', async (e) => {
   e.preventDefault();
   const email = document.getElementById('email').value;
   const password = document.getElementById('password').value;
@@ -20,3 +20,4 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
     alert('Usuário ou Senha incorretos, favor tente novamente!');
   }
 });
+

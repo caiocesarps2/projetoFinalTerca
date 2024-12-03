@@ -1,8 +1,8 @@
-document.getElementById('bookForm').addEventListener('submit', async (e) => {
+document.getElementById('form-livro').addEventListener('submit', async (e) => {
     e.preventDefault();
-    const title = document.getElementById('title').value;
-    const author = document.getElementById('author').value;
-    const price = document.getElementById('price').value;
+    const title = document.getElementById('titulo-livro').value;
+    const author = document.getElementById('autor-livro').value;
+    const price = document.getElementById('preco-livro').value;
 
     try {
       const response = await fetch('http://localhost:3000/books', {
@@ -13,6 +13,7 @@ document.getElementById('bookForm').addEventListener('submit', async (e) => {
 
       if (response.ok) {
         alert('Cadastro do Livro realizado com sucesso!');
+        console.log({title, author, price})
       } else {
         throw new Error();
       }
@@ -20,3 +21,8 @@ document.getElementById('bookForm').addEventListener('submit', async (e) => {
       alert('Tente realizar novamente o cadastro do livro.');
     }
   });
+
+  document.getElementById('form-livro').addEventListener("reset", (e) =>{
+    e.preventDefault();
+    window.location.href = 'login.html';
+  })
