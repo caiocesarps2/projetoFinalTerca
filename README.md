@@ -1,5 +1,4 @@
-# Padrão MVC de Cadastro de Livros. ![image](https://github.com/user-attachments/assets/03c35a47-19e0-44d9-a0d2-8d854bdca385)
-
+# Padrão MVC de Cadastro de Livros.
 
 ## Índice  
 - [Sobre o Projeto](#sobre-o-projeto)  
