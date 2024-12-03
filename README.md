@@ -1,4 +1,4 @@
-# BookStore 📚
+# Padrão MVC de Cadastro de Livros.
 
 ## Índice  
 - [Sobre o Projeto](#sobre-o-projeto)  
@@ -9,16 +9,15 @@
 - [Configuração do Banco de Dados](#configuração-do-banco-de-dados)  
 - [Execução do Projeto](#execução-do-projeto)  
 - [Testando as Requisições](#Testando-as-Requisições)
-- [Agradecimentos](#Agradecimentos)
 
 
 ---
 
 ## Sobre o Projeto  
 
-BookStore é um projeto backend voltado para o gerenciamento de uma livraria virtual, com foco em eficiência e organização. Ele fornece uma API robusta e bem estruturada, capaz de atender às necessidades de sistemas modernos no setor de livrarias.
+O Cadastro de Livros é um projeto backend voltado para o gerenciamento de uma livraria. Ele fornece uma API bem estruturada, capaz de atender às necessidades de sistemas modernos no setor de livrarias.
 
-Desenvolvido com tecnologias como **Node.js**, **TypeScript** e **PostgreSQL**, o projeto combina desempenho e escalabilidade, garantindo uma solução confiável para operações que exigem alta disponibilidade e precisão.
+Desenvolvido com tecnologias como **Node.js**, **TypeScript** e **PostgreSQL**, o projeto combina escabilidade e desempenho, garantindo uma solução para operações que exigem disponibilidade e precisão.
 
 ---
 
@@ -35,8 +34,7 @@ Desenvolvido com tecnologias como **Node.js**, **TypeScript** e **PostgreSQL**, 
 - **Express.js**  
 - **TypeScript**  
 - **PostgreSQL**  
-- **Jest** (para testes unitários e de integração)  
-- **Supertest** (para testes de requisição)  
+- **Jest** (para testes unitários e de integração).  
 
 ---
 
@@ -45,8 +43,8 @@ Desenvolvido com tecnologias como **Node.js**, **TypeScript** e **PostgreSQL**, 
 Antes de começar, certifique-se de ter as seguintes ferramentas instaladas:  
 
 - **Node.js** (versão 18 ou superior)  
-- **PostgreSQL** (para banco de dados)  
-- Editor de código como **VS Code** (recomendado).  
+- **PostgreSQL** (para o banco de dados)  
+- Editor de código como **VS Code** ou correlatos.  
 
 ---
 
@@ -54,12 +52,12 @@ Antes de começar, certifique-se de ter as seguintes ferramentas instaladas:
 
 **1.** Clone o repositório:  
 
-git clone https://github.com/GabeeDevs/FinalProject.git
+git clone https://github.com/caiocesarps2/projetoFinalTerca
 
 
 **2.** Acessando a pasta do projeto:
 
-cd bookstore
+cd LojaLivros
 
 
 **3. Instalando as dependencias:**
@@ -74,7 +72,7 @@ cd bookstore
 
 **1.** Certifique-se de que o PostgreSQL está em execução. 
 
-**2.** Configure a conexão no arquivo no qual está localizado em src/config/database.ts.
+**2.** Configure a conexão no arquivo no qual está localizado em src/config/dataBase.ts.
 
 **OBS:** é necessario trocar a chave de conexão para que não tenha erro na execução do banco de dados.
 
@@ -83,10 +81,10 @@ cd bookstore
 
 **Criando  a tabela de livros:**
 
-npx ts-node src/migrations/bookMigrations.ts
+npx ts-node LojaLivros/src/migrations/bookMigrations.ts
 
 **Criando a tabela de Usuários:**
-npx ts-node src/migrations/migrations.ts
+npx ts-node LojaLivros/src/migrations/migrations.ts
 
 ---
 
@@ -95,7 +93,7 @@ npx ts-node src/migrations/migrations.ts
 Após realizar todos os passos acima vamos para a execução do Projeto.
 
 **Iniciando o servidor**
-npx ts-node src/server.ts
+npx ts-node LojaLivros/src/server.ts
 
 ---
 
@@ -133,18 +131,10 @@ curl -X POST http://localhost:3000/books -H "Content-Type: application/json" -d 
 
 **TESTANDO COM SOLICITAÇÕES NO HTML UTILIZANDO A API NO JAVASCRIPT  (OBS: Necessário estar com o servidor do back-end rodando)**
 
-**Link do repositório de Front-End:**
-https://github.com/GabeeDevs/FinalProjectFront
----
+**COM O SERVIDOR JÁ INICIADO**
 
-## Agradecimentos  
+**Realize os seguintes passos:**
 
-Obrigado por dedicar seu tempo para conhecer o projeto **BookStore**! Desenvolvi este sistema com muito cuidado e atenção, buscando aplicar as melhores práticas de desenvolvimento backend com tecnologias modernas e eficientes.  
+- Abra o arquivo register.html com o OpenLiveServer.
+- Após isso faça os testes, como Registro, Login e Cadastro dos Livros!
 
-Espero que este projeto atenda às suas expectativas e seja útil, seja para estudos, prática ou até como base para novas implementações.  
-
-Caso tenha dúvidas, sugestões ou queira contribuir, ficarei muito feliz em ouvir você! Seu feedback é essencial para melhorar ainda mais este trabalho.  
-
-Agradeço novamente pela oportunidade de compartilhar este projeto com vocês!  
-
-**Desenvolvido com dedicação por Gabriel Ramos.**
