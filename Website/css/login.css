@@ -17,6 +17,7 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    transition: background 200ms ease-in-out;
     overflow: hidden;
     font-family: "Open Sans", sans-serif;
 }
@@ -39,6 +40,7 @@ main{
     display: flex;
     flex-direction: column;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    transition: background 200ms ease-in-out;
 }
 
 #titulo-form{
