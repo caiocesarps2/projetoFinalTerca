@@ -1,4 +1,4 @@
-# Padrão MVC de Cadastro de Livros.
+# Padrão MVC com Cadastro de Livros.
 
 ## Índice  
 - [Sobre o Projeto](#sobre-o-projeto)  
@@ -43,7 +43,7 @@ Desenvolvido com tecnologias como **Node.js**, **TypeScript** e **PostgreSQL**, 
 Antes de começar, certifique-se de ter as seguintes ferramentas instaladas:  
 
 - **Node.js** (versão 18 ou superior)  
-- **PostgreSQL** (para o banco de dados)  
+- **PostgreSQL** (banco de dados)  
 - Editor de código como **VS Code** ou correlatos.  
 
 ---
@@ -112,12 +112,12 @@ curl -X GET http://localhost:3000/users
 
 **2.** Registro de Usuários:
 
-curl -X POST http://localhost:3000/register -H "Content-Type: application/json" -d '{"name": "Jeremias", "email": "jeremias@example.com", "password": "senhaSeguraa"}'
+curl -X POST http://localhost:3000/register -H "Content-Type: application/json" -d '{"name": "Malcom", "email": "malcom@example.com", "password": "minhaSenha"}'
 
 
 **3.** Login de Usuário:
 
-curl -X POST http://localhost:3000/login -H "Content-Type: application/json" -d '{"email": "Jeremias@example.com", "password": "senhaSeguraa"}'
+curl -X POST http://localhost:3000/login -H "Content-Type: application/json" -d '{"email": "malcom@example.com", "password": "minhaSenha"}'
 
 
 **4.** Consulta de Livros: 
@@ -126,7 +126,7 @@ curl -X GET http://localhost:3000/books
 
 **5..** Registro de Livros:
 
-curl -X POST http://localhost:3000/books -H "Content-Type: application/json" -d '{"title": "Isaías 54:17", "author": "Isaías", "price": "59.90"}'
+curl -X POST http://localhost:3000/books -H "Content-Type: application/json" -d '{"title": "Pedro", "author": "Deus", "price": "999.00"}'
 
 
 **TESTANDO COM SOLICITAÇÕES NO HTML UTILIZANDO A API NO JAVASCRIPT  (OBS: Necessário estar com o servidor do back-end rodando)**
