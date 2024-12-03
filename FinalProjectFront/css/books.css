@@ -16,97 +16,93 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
-
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-a:link, a:visited{
-    text-decoration: none;
-    color: black;
 }
 
 main{
     height: auto;
-
     display: flex;
     justify-content: center;
     align-items: center;    
 }   
+
 .container{
     width: 500px;
-    height: 500px;
-    background-color: #e2e2e2;
-    border-radius: 40px;
+    height: 480px;
+    background-color: #eee;  
+    border-radius: 5px;
     border-style: solid;
     border-width: 2px;
-
+    border: #ffffff;
     display: flex;
     flex-direction: column;
 }
 #titleh2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    height: 50px;
-    background-color: rgb(29, 29, 29);
-    
-    color: #ffffff;
-    border-top-left-radius:40px;
-    border-top-right-radius:40px;
-
+    height: 60px;
     text-align: center;
-    font-size: 1.8em;
-    color: #ffffff;
+    font-size: 40px;
+    color: #333;
+    margin-top: 20px;
 }
-#bookForm{
+#form-livro{
     width: 100%;
-    height: 450px;
-
+    height: 370px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 20px;
 }
-#bookForm h2{
-    width: 70%;
-    font-size: 1.4em;
-    color: #292929;
+#form-livro h2{
+    height: 20px;
+    width: 80%;
+    font-size: 1.6em;
+    font-weight: bold;
+    font-size: 20px;
+    color: #333;
 }
 #title{
-    width: 70%;
-    height: 30px;
-    border-radius: 20px;
+    width: 80%;
+    border-radius: 5px;
+    border: 1px solid #333;
 }
 #author{
-    width: 50%;
-    height: 30px;
-    border-radius: 20px;
+    width: 60%;
+    border-radius: 5px;
     margin-right: 100px;
+    border: 1px solid #333;
 }
 #price{
-    width: 20%;
-    height: 30px;
-    border-radius: 20px;
+    width: 30%;
+    border-radius: 5px;
     margin-right: 250px;
+    border: 1px solid #333;
 }
-#bookForm input{
-    padding-left: 10px;
-    font-size: 1.1em;
+#form-livro input{
+    height: 35px;
+    border-radius: 5px;
+    font-size:  15px;
+    padding: 10px;
+    border: 1px solid #333;
 }
-#bookForm input:focus{
-    transform: scale(110%);
-    transition: 0.6s;
-}
-#bookForm button{
-    height: 50px;
-    width: 40%;
-    border-radius: 30px;
-    margin-bottom: 15px;
-    background-color: #292929;
 
+#form-livro button{
+    height: 40px;
+    width: 80%;
+    margin-top: 5px;
+    border: none;
+    background-color: #2D373D;
+    border-radius: 5px;
     color: #ffffff;
-    font-size: 1.3em;
+    font-size: 18px;
+    font-weight: bold;
+    opacity: .8;
+    transition: opacity 200ms ease-in-out;
 }
-#bookForm button:hover{
-    cursor: pointer;
-    transform: scale(110%);
-    transition: 0.6s;
+#form-livro button:hover{
+    opacity: 1;
 }

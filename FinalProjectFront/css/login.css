@@ -44,15 +44,13 @@ main{
     justify-content: center;
     width: 100%;
     height: 60px;
-    border-top-left-radius:40px;
-    border-top-right-radius:40px;
     text-align: center;
     font-size: 40px;
     color: #333;
     margin-top: 20px;
 }
 
-#loginForm{
+#form-login{
     height: 400px;
     width: 100%;
     display: flex;
@@ -61,7 +59,7 @@ main{
     flex-direction: column;
     gap: 30px;
 }
-#loginForm h2{
+#form-login label{
     height: 10px;
     width: 80%;
     font-size: 1.6em;
@@ -69,7 +67,7 @@ main{
     font-size: 20px;
     color: #333;
 }
-#loginForm input{
+#form-login input{
     height: 40px;
     width: 80%;
     border-radius: 5px;
@@ -78,7 +76,7 @@ main{
     border: 1px solid #333;
 }
 
-#loginForm button{
+#form-login button{
     height: 40px;
     width: 80%;
     margin-top: 5px;
@@ -91,21 +89,23 @@ main{
     opacity: .8;
     transition: opacity 200ms ease-in-out;
 }
-#loginForm button:hover{
+#form-login button:hover{
     opacity: 1;
 }
 
-#loginForm a{ 
+#form-login a{ 
     font-size: 18px;
     color: #555;
     transition: color 200ms ease-in-out;
     text-decoration: none;
+    font-weight: bold;
 }
-#loginForm a:hover{
+#form-login a:hover{
     text-decoration: underline;
     color: #333;
 }
 
-#loginForm span{
+#form-login span{
     color: #555;
+    font-weight: bold;
 }

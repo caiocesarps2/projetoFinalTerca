@@ -11,12 +11,12 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
     });
 
     if (response.ok) {
-      alert('Bem vindo!');
+      alert('Login efetuado com sucesso!');
       window.location.href = 'books.html';
     } else {
       throw new Error();
     }
   } catch {
-    alert('Usuário ou Senha incorretos, tente novamente');
+    alert('Usuário ou Senha incorretos, favor tente novamente!');
   }
 });

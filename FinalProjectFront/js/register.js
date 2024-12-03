@@ -18,6 +18,6 @@ document.getElementById('registerForm').addEventListener('submit', async (e) => 
         throw new Error();
       }
     } catch {
-      alert('Tente novamente se registrar');
+      alert('Tente se registrar novamente, algo deu errado!');
     }
   });

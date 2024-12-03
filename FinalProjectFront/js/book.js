@@ -12,11 +12,11 @@ document.getElementById('bookForm').addEventListener('submit', async (e) => {
       });
 
       if (response.ok) {
-        alert('Livro cadastrado com sucesso!');
+        alert('Cadastro do Livro realizado com sucesso!');
       } else {
         throw new Error();
       }
     } catch {
-      alert('Tente cadastrar o livro novamente');
+      alert('Tente realizar novamente o cadastro do livro.');
     }
   });
